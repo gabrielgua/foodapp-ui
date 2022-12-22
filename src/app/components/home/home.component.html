@@ -1,0 +1,23 @@
+<div class="container">
+    <div *ngIf="!usuarioLogado">
+        <div class="titulo" >
+            <h1>Bem-Vindo!</h1>
+        </div>
+        <div class="separator-horizontal"></div>
+        <div>
+            <h4>Faça login para continuar.</h4>
+        </div>
+    </div>
+    <div *ngIf="usuarioLogado">
+        <div class="titulo">
+            <h1>Restaurantes</h1>
+        </div>
+        <div class="separator-horizontal"></div>
+        <div *ngFor="let restaurante of this.restaurantes" class="card-restaurante">
+            <h3>{{restaurante.nome}}</h3>
+        </div>
+    </div>
+    
+</div>
+
+

@@ -1,0 +1,48 @@
+.separator-horizontal {
+    background-color: rgb(95, 95, 95);
+}
+
+.container > div > div > h4 {
+    font-weight: normal;
+}
+
+.cozinha-nome {
+    font-size: medium;
+    font-weight: normal;
+    color: rgb(95, 95, 95);
+}
+
+.row { 
+    margin-top: 1rem;
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: auto;
+    grid-gap: 1rem;
+}
+    
+.card-restaurante {
+    border-radius: .5rem;
+    background-color: whitesmoke;
+    padding: 1.5rem;
+    padding-top: .5rem;
+    color: crimson;
+}
+
+.card-restaurante > h3 > a {
+    color: crimson;
+    text-decoration: none;
+}
+
+.card-restaurante > h3 > a:hover {
+    text-decoration: underline;
+}
+
+.card-restaurante > p {
+    color: rgb(95, 95, 95);
+    margin-bottom: 0;
+}
+
+.card-restaurante > p > span {
+    color: green;
+}
+

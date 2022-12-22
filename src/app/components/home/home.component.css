@@ -1,0 +1,11 @@
+
+
+.separator-horizontal {
+    background-color: rgb(95, 95, 95);
+}
+
+.container > div > div > h4 {
+    font-weight: normal;
+}
+
+

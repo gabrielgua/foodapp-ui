@@ -1,0 +1,65 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<div class="container">
+    <div class="titulo">
+        <div class="header">
+            <span class="material-symbols-outlined icon">
+                account_circle
+            </span>
+            <h1>{{usuarioNome}}</h1>
+        </div>
+    </div>
+    <div class="content">
+        <div class="dialog sucesso" *ngIf="sucesso">
+            Usuário atualizado com sucesso.
+            <button class="btn-fechar" (click)="sucesso = !sucesso">
+                <span class="material-symbols-outlined">
+                    close
+                </span>
+            </button>
+        </div>
+        <div class="dialog erro" *ngIf="erro">
+            Erro ao atualizar o usuário.
+            
+            <button class="btn-fechar" (click)="erro = !erro">
+                <span class="material-symbols-outlined">
+                    close
+                </span>
+            </button>
+        </div>
+        
+        <form #usuariosForm="ngForm" autocomplete="off" (submit)="editarUsuario(usuariosForm)" class="form-usuario">
+            <div class="div-input">
+                <h3>Dados da conta</h3>
+                <div class="menu-usuario" >
+                    <div class="separator"></div>
+                    <a href="javascript:;" class="btn-editar" (click)="editando = !editando">
+                        <span *ngIf="!editando" class="material-symbols-outlined">
+                            edit
+                        </span>  
+                        <span *ngIf="editando" class="material-symbols-outlined">
+                            undo
+                        </span>
+                    </a>   
+                </div>
+            </div>
+            <div class="separator-horizontal"></div>
+            <div class="div-input">
+                <label for="nome">Nome</label>
+                <div class="div-text" *ngIf="!editando">
+                    <div class="separator"></div>
+                    {{usuario.nome}}
+                </div>
+                <input *ngIf="editando" [(ngModel)]="usuario.nome" type="text" name="nome" class="input-text">
+            </div>
+            <div class="div-input">
+                <label for="email">Email</label>
+                <div class="div-text" *ngIf="!editando">
+                    <div class="separator"></div>
+                    {{usuario.email}}
+                </div>
+                <input *ngIf="editando" [(ngModel)]="usuario.email" type="text" name="email" class="input-text">
+            </div>
+            <button *ngIf="editando" class="btn-submit" type="submit">Atualizar</button>
+        </form>
+    </div>
+</div>

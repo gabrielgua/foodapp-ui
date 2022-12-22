@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="titulo">
+        <h1>Restaurantes</h1>
+    </div>
+    <div class="separator-horizontal"></div>
+    <div class="row">
+        <div class="column" *ngFor="let restaurante of this.restaurantes">
+            <div class="card-restaurante">
+                <h3>
+                    <a [routerLink]="['/restaurantes', restaurante.id]">{{restaurante.id}}#. {{restaurante.nome}}</a><br>
+                    <span class="cozinha-nome">({{restaurante.cozinha.nome}})</span>
+                </h3>
+                <p>
+                    Frete: 
+                    <span>R$ {{restaurante.taxaFrete.toFixed(2)}}</span> 
+                </p>
+                
+            </div>
+        </div>
+    </div>
+</div>

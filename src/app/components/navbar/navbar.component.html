@@ -1,0 +1,45 @@
+<nav class="navbar">
+    <div class="content" *ngIf="!usuarioEmail">
+        <div class="navbar-menu">
+            <ul class="navbar-logo-and-items">
+                <li class="navbar-menuitem">
+                    <h1>foodApp</h1>
+                </li>
+            </ul>
+            <ul class="login-logout-link">
+                <li class="navbar-menuitem">
+                    <a href="javascript:;" (click)="loginPage()">Login</a>
+                </li>
+            </ul>
+        </div>        
+    </div>
+    <div class="content" *ngIf="usuarioEmail">
+        <div class="navbar-menu"> 
+            <ul class="navbar-logo-and-items">
+                <li class="navbar-menuitem">
+                    <h1>foodApp</h1>
+                </li>
+                <li class="separator"></li>
+                <li class="navbar-menuitem">
+                    <a routerLink="home">Restaurantes</a>
+                </li>
+                <li class="navbar-menuitem" *ngIf="authService.temPermissao('CONSULTAR_USUARIOS_GRUPOS_PERMISSOES')">
+                    <a routerLink="usuarios">Usuários</a>
+                </li>
+            </ul>
+            <ul class="login-logout-link">
+                <div class="navbar-menuitem dropdown">
+                    <a>{{usuarioNome}}</a>
+                    <ul class="dropdown-menu">
+                        <li>{{usuarioEmail}}</li>
+                        <li class="separator-horizontal"></li>
+                        <li><a [routerLink]="['/usuarios', usuarioId]">Sua conta</a></li>
+                        <li>
+                            <a href="javascript:;" (click)="logout()">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </ul>
+        </div>     
+    </div>
+</nav>

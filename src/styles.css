@@ -1,1 +1,44 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html, body {
+    border: none !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    font-family: 'Roboto', sans-serif !important;
+    font-size: medium;
+    font-weight: normal;
+}
+
+:root {
+    --secondary-text: rgb(95, 95, 95);
+    --red: crimson;
+}
+
+.separator {
+    background-color: whitesmoke;
+    opacity: .3;
+    height: 3rem;
+    width: .03rem;
+}
+
+.separator-horizontal {
+    background-color: rgb(95, 95, 95);
+    opacity: .3;
+    height: .03rem;
+    width: 100%;
+}
+
+.container {
+    height: 500px;
+    padding: 2rem 5rem;
+}
+
+.container > .titulo > h1 {
+    color: rgb(54, 54, 54);
+    font-weight: bolder;
+}
+
+.icon {
+    color: crimson;
+}
+

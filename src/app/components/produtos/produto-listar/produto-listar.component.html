@@ -1,0 +1,13 @@
+<div class="produto-div">
+    
+
+    <div class="produto-card" *ngFor="let produto of produtos">
+        <img class="produto-foto" src={{produto.foto}} />
+        <div class="separator"></div>
+        <div class="atributos">
+            <div class="produto-nome">{{produto.id}}#. {{produto.nome}}</div>
+            <div class="produto-descricao">{{produto.descricao}}.</div>
+            <div class="produto-preco">R$ {{produto.preco!.toFixed(2)}}</div>
+        </div>
+    </div>
+</div>

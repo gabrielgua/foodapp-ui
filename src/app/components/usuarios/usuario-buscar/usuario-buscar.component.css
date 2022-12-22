@@ -1,0 +1,169 @@
+.content {
+    margin-top: 1rem;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    background-color: whitesmoke;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header > span {
+    font-size: xx-large;
+    color: white;
+    padding: .75rem;
+    border-radius: 50%;
+    background-color: crimson;
+}
+
+.dialog {
+    background-color: white;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sucesso {
+    color: green;
+}
+
+.erro {
+    color: red;
+}
+
+.btn-fechar {
+    border: none;
+    height: 20px;
+    width: 20px;
+    color: rgb(95, 95, 95);
+    font-size: large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.btn-fechar:hover {
+    cursor: pointer;
+}
+
+.btn-fechar:active {
+    color: rgb(216, 216, 216);
+}
+
+.form-usuario {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: medium;
+    font-weight: 500;
+    color: crimson;
+}
+
+.menu-usuario {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.div-input:first-child {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.div-input > h3 {
+    font-weight: bolder;
+    font-size: x-large;
+    margin: 1rem 0rem;
+}
+
+.div-input {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.input-text {
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+    color: var(--secondary-text);
+    font-size: medium;
+    transition: .5s;
+    box-shadow: 0px 4px 20px -20px crimson;
+}
+
+.input-text:focus {
+    outline: none;
+    transition: .1s;
+    box-shadow: 0px 4px 50px -20px crimson;
+}
+
+.separator {
+    background-color: crimson;
+    height: 2rem;
+}
+
+.btn-submit {
+    padding: 1rem;
+    border-radius: 1.5rem;
+    border: none;
+    font-size: medium;
+    color: white;
+    background-color: crimson;
+    transition: .3s;
+}
+
+.btn-submit:hover {
+    cursor: pointer;
+    transition: .15s;
+    border-radius: 1rem;    
+
+}
+
+.btn-submit:active {
+    color: whitesmoke;
+}
+
+.btn-editar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+    font-size: medium;
+    color: white;
+    border: none;
+    padding: .5rem;
+    border-radius: 50%;
+    background-color: crimson;
+    transition: .25s;
+    text-decoration: none;
+}
+
+.btn-editar:hover {
+    cursor: pointer;
+    background-color: white;
+    color: crimson;
+    transition: .1s;
+}
+
+.div-text {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--secondary-text);
+}
+
+.div-text > .separator {
+    height: 50px;
+}
+
+
+

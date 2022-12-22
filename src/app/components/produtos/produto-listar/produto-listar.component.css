@@ -1,0 +1,52 @@
+.produto-div {
+    padding: 1rem 0rem;
+
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-auto-rows: auto;
+    grid-gap: 1rem;
+}
+
+.produto-card {
+    background-color: whitesmoke;
+    padding: 1rem;
+    display: flex;
+    border-radius: 1rem;
+    gap: 1.5rem;
+}
+
+.produto-foto {
+    background-color: white;
+    min-height: 150px;
+    min-width: 150px;
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.atributos {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.produto-nome {
+    font-size: larger;
+    color: crimson;
+}
+
+.produto-descricao {
+    font-size: medium;
+    color: rgb(95, 95, 95);
+}
+
+.produto-preco {
+    margin-top: 2rem;
+    font-size: x-large;
+    color: green;
+}
+
+.separator {
+    height: auto;
+    background-color: crimson;
+}
